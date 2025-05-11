@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* centers horizontally */
+  justify-content: center; /* centers vertically */
+  height: 98vh          /* full viewport height */
+}
+
+.quoteTitle {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.quoteClass {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  max-width: 80%;
+}
+
+.quoteButton {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.quoteButton:hover {
+  background-color: #0056b3;
+}
