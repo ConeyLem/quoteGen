@@ -1,6 +1,4 @@
-import React, {useState} from "react"
-
-
+import {useState} from "react"
 
 export default function QuoteGenerator(){
 
@@ -14,11 +12,22 @@ export default function QuoteGenerator(){
     "Believe you can and you’re halfway there. - Theodore Roosevelt"
     ];
     const [currentQuote, setCurrentQuote] = useState(quotes[0])
+
+    function generateQuote(){
+        setCurrentQuote(quotes[Math.floor(Math.random() * quotes.length)])
+    }
         
     return(
         <>
-        <h1 className="quoteClass">{currentQuote}</h1>
-        <button className="quoteButton">Generate Random Quote</button>
+            <div className="container">
+                <h1 className="quoteTitle">Random Quote Generator</h1>
+                <h1 className="quoteClass">{currentQuote}</h1>
+                <button className="quoteButton"
+                    onClick={generateQuote}
+                >
+                    Generate Random Quote
+                </button>
+            </div>
         </>
     )
 }
